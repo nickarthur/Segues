@@ -20,6 +20,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func buttonPressed(_ sender: UIButton) {
+      
+        // you can choose to make the button the sender or you can
+        // let the current viewcontroller be the sender as we did here
 
+        performSegue(withIdentifier: "goToSecondScreen", sender: self)
+        
+    }
+    
 }
 

@@ -12,6 +12,7 @@
 		73CDB5E71FD91001007CF3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CDB5E51FD91001007CF3CF /* Main.storyboard */; };
 		73CDB5E91FD91001007CF3CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73CDB5E81FD91001007CF3CF /* Assets.xcassets */; };
 		73CDB5EC1FD91001007CF3CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CDB5EA1FD91001007CF3CF /* LaunchScreen.storyboard */; };
+		73CDB5F41FD913B0007CF3CF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CDB5F31FD913B0007CF3CF /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		73CDB5E81FD91001007CF3CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73CDB5EB1FD91001007CF3CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73CDB5ED1FD91001007CF3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73CDB5F31FD913B0007CF3CF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				73CDB5E11FD91001007CF3CF /* AppDelegate.swift */,
 				73CDB5E31FD91001007CF3CF /* ViewController.swift */,
 				73CDB5E51FD91001007CF3CF /* Main.storyboard */,
+				73CDB5F31FD913B0007CF3CF /* SecondViewController.swift */,
 				73CDB5E81FD91001007CF3CF /* Assets.xcassets */,
 				73CDB5EA1FD91001007CF3CF /* LaunchScreen.storyboard */,
 				73CDB5ED1FD91001007CF3CF /* Info.plist */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73CDB5F41FD913B0007CF3CF /* SecondViewController.swift in Sources */,
 				73CDB5E41FD91001007CF3CF /* ViewController.swift in Sources */,
 				73CDB5E21FD91001007CF3CF /* AppDelegate.swift in Sources */,
 			);
