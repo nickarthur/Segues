@@ -24,8 +24,17 @@ class ViewController: UIViewController {
       
         // you can choose to make the button the sender or you can
         // let the current viewcontroller be the sender as we did here
-
-        performSegue(withIdentifier: "goToSecondScreen", sender: self)
+        
+        switch sender.tag {
+        case 1:
+            performSegue(withIdentifier: "goToSecondScreen", sender: self)
+            break
+        case 2:
+            performSegue(withIdentifier: "goToMagentaScreen", sender: self)
+            break
+        default:
+            print("oops")
+        }
         
     }
     

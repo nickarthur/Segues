@@ -14,6 +14,9 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        print("GREEN VIEW DID LOAD")
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +24,13 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: {()
+            in
+            print("GREEN COMPLETE")
+        })
+    }
+    
     /*
     // MARK: - Navigation
 

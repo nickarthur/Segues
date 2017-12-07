@@ -13,6 +13,7 @@
 		73CDB5E91FD91001007CF3CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73CDB5E81FD91001007CF3CF /* Assets.xcassets */; };
 		73CDB5EC1FD91001007CF3CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CDB5EA1FD91001007CF3CF /* LaunchScreen.storyboard */; };
 		73CDB5F41FD913B0007CF3CF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CDB5F31FD913B0007CF3CF /* SecondViewController.swift */; };
+		73CDB5F61FD91AE9007CF3CF /* MagentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CDB5F51FD91AE9007CF3CF /* MagentaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		73CDB5EB1FD91001007CF3CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73CDB5ED1FD91001007CF3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73CDB5F31FD913B0007CF3CF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		73CDB5F51FD91AE9007CF3CF /* MagentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagentaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		73CDB5E01FD91001007CF3CF /* Segues */ = {
 			isa = PBXGroup;
 			children = (
-				73CDB5E11FD91001007CF3CF /* AppDelegate.swift */,
-				73CDB5E31FD91001007CF3CF /* ViewController.swift */,
-				73CDB5E51FD91001007CF3CF /* Main.storyboard */,
-				73CDB5F31FD913B0007CF3CF /* SecondViewController.swift */,
-				73CDB5E81FD91001007CF3CF /* Assets.xcassets */,
-				73CDB5EA1FD91001007CF3CF /* LaunchScreen.storyboard */,
-				73CDB5ED1FD91001007CF3CF /* Info.plist */,
+				73CDB5FB1FD91B71007CF3CF /* Supporting Files */,
+				73CDB5FA1FD91B3E007CF3CF /* Resources */,
+				73CDB5F91FD91B28007CF3CF /* View */,
+				73CDB5F81FD91B21007CF3CF /* Model */,
+				73CDB5F71FD91AF2007CF3CF /* Controllers */,
 			);
 			path = Segues;
+			sourceTree = "<group>";
+		};
+		73CDB5F71FD91AF2007CF3CF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				73CDB5E11FD91001007CF3CF /* AppDelegate.swift */,
+				73CDB5F31FD913B0007CF3CF /* SecondViewController.swift */,
+				73CDB5F51FD91AE9007CF3CF /* MagentaViewController.swift */,
+				73CDB5E31FD91001007CF3CF /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		73CDB5F81FD91B21007CF3CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		73CDB5F91FD91B28007CF3CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73CDB5EA1FD91001007CF3CF /* LaunchScreen.storyboard */,
+				73CDB5E51FD91001007CF3CF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		73CDB5FA1FD91B3E007CF3CF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				73CDB5E81FD91001007CF3CF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		73CDB5FB1FD91B71007CF3CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				73CDB5ED1FD91001007CF3CF /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +184,7 @@
 			files = (
 				73CDB5F41FD913B0007CF3CF /* SecondViewController.swift in Sources */,
 				73CDB5E41FD91001007CF3CF /* ViewController.swift in Sources */,
+				73CDB5F61FD91AE9007CF3CF /* MagentaViewController.swift in Sources */,
 				73CDB5E21FD91001007CF3CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Segues/Info.plist;
+				INFOPLIST_FILE = "Segues/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.invirtstudios.Segues;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -293,7 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Segues/Info.plist;
+				INFOPLIST_FILE = "Segues/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.invirtstudios.Segues;
 				PRODUCT_NAME = "$(TARGET_NAME)";
