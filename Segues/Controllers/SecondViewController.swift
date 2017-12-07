@@ -10,11 +10,20 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    // here is a property that does not need to be init'd (optional)
+    var textPassedOver : String? // receives the text from the first screen
+    
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        if let textPassedOver = textPassedOver {
+            label.text = textPassedOver
+        }
+            
         print("GREEN VIEW DID LOAD")
 
     }

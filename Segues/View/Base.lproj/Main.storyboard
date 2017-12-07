@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVy-Uu-1Dg">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVy-Uu-1Dg">
                                 <rect key="frame" x="84" y="317" width="206" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="To Green Screen (Tag = 1)">
@@ -44,11 +43,26 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OHu-0s-aZW"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCF-5P-843">
+                                <rect key="frame" x="37.5" y="178" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="qym-P9-0Nj"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fCF-5P-843" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="158" id="W8k-4L-rav"/>
+                            <constraint firstItem="fCF-5P-843" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y0o-FK-EJB"/>
+                            <constraint firstItem="BVy-Uu-1Dg" firstAttribute="top" secondItem="fCF-5P-843" secondAttribute="bottom" constant="109" id="dNZ-zX-pzh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="textField" destination="fCF-5P-843" id="Rgc-UL-1dv"/>
                         <segue destination="ZsG-Ia-n5B" kind="show" identifier="goToSecondScreen" id="wD9-qq-jGv"/>
                         <segue destination="THi-f6-TaY" kind="show" identifier="goToMagentaScreen" id="SMr-G6-THr"/>
                     </connections>
@@ -65,23 +79,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAZ-mQ-Lua">
-                                <rect key="frame" x="16" y="20" width="112" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAZ-mQ-Lua">
+                                <rect key="frame" x="16" y="30.5" width="112" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <state key="normal" title="BACK"/>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="ZsG-Ia-n5B" eventType="touchUpInside" id="qc4-Kw-dLe"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibq-Xg-ibY">
+                                <rect key="frame" x="0.0" y="215.5" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tgC-RO-ulp" firstAttribute="bottom" secondItem="ibq-Xg-ibY" secondAttribute="bottom" constant="431" id="4QT-GE-E87"/>
+                            <constraint firstItem="tgC-RO-ulp" firstAttribute="trailing" secondItem="ibq-Xg-ibY" secondAttribute="trailing" id="Bzu-4Q-Kc8"/>
+                            <constraint firstItem="ibq-Xg-ibY" firstAttribute="top" secondItem="wAZ-mQ-Lua" secondAttribute="bottom" constant="125" id="DaM-h3-Yer"/>
+                            <constraint firstItem="ibq-Xg-ibY" firstAttribute="leading" secondItem="tgC-RO-ulp" secondAttribute="leading" id="PAf-2F-eOg"/>
+                            <constraint firstItem="ibq-Xg-ibY" firstAttribute="centerX" secondItem="VYA-rI-LBi" secondAttribute="centerX" id="PVS-r5-41u"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tgC-RO-ulp"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="ibq-Xg-ibY" id="fIp-MX-dqt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTb-fM-43s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="90"/>
+            <point key="canvasLocation" x="1020" y="89.505247376311857"/>
         </scene>
         <!--Magenta View Controller-->
         <scene sceneID="YLl-SU-y4t">

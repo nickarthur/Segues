@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,7 +26,7 @@ class ViewController: UIViewController {
       
         // you can choose to make the button the sender or you can
         // let the current viewcontroller be the sender as we did here
-        
+
         switch sender.tag {
         case 1:
             performSegue(withIdentifier: "goToSecondScreen", sender: self)
@@ -35,8 +37,19 @@ class ViewController: UIViewController {
         default:
             print("oops")
         }
-        
     }
     
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // note only the second screen has a label to display the text
+        if segue.identifier == "goToSecondScreen" {
+            
+            if let destinationViewController = segue.destination as? SecondViewController {
+                
+                destinationViewController.textPassedOver = textField.text
+            }
+        }
+    }
 }
 
